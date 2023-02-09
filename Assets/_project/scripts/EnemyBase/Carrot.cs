@@ -7,6 +7,7 @@ public class Carrot : MonoBehaviour
     [SerializeField] private float _speed = 2;
     void Start()
     {
+        transform.rotation = Quaternion.identity;
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         Transform playerTransform = FindObjectOfType<PlayerHealth>().transform;
         Vector3 toPlayer = (playerTransform.position - transform.position).normalized;
