@@ -17,7 +17,6 @@ public class SetTriggerEveryNSeconds : MonoBehaviour
         {
             _timer = 0;
             _animator.SetTrigger(_triggerName);
-            Debug.Log("settrigger");
         }
     }
 }
