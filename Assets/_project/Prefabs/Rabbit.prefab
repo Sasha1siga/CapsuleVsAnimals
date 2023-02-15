@@ -150,12 +150,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456803377191324150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15709c3762aa34f45bddacc3fdb61b88, type: 3}
+  m_Script: {fileID: 11500000, guid: 188c877698e1fcd43ac2873c4ed97985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _period: 7
-  _animator: {fileID: 1456803376583867873}
-  _triggerName: Attack
+  _leftEuler: {x: 0, y: -30, z: 0}
+  _rightEuler: {x: 0, y: -150, z: 0}
+  _rotationSpeed: 5
 --- !u!114 &1456803377191324138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456803377191324150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590d68dff2e8e8f4b8a1ec2f7940ac1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 73bf4bd80f81e6748927b4a87cc216a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRenderers:
@@ -220,12 +220,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456803377191324150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddfd727fcd4cc34faf1f3946a85a28f, type: 3}
+  m_Script: {fileID: 11500000, guid: b055521301122894880235c2b365ead9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftEuler: {x: 0, y: -30, z: 0}
-  _rightEuler: {x: 0, y: -150, z: 0}
-  _rotationSpeed: 5
+  _period: 3
+  _animator: {fileID: 1456803376583867873}
+  _triggerName: Attack
 --- !u!1001 &1456803376421169491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1798892429259133954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd0c0ec0ce1b7a47abc0ee0c006b14b, type: 3}
+  m_Script: {fileID: 11500000, guid: d7f6e73f6ac104c409040b84e938ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6269588663370900542, guid: 62101b3040902804d90b3bd53ebd8869, type: 3}

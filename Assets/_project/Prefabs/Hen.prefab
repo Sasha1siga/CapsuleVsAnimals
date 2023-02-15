@@ -176,7 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3070312410299183520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590d68dff2e8e8f4b8a1ec2f7940ac1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 73bf4bd80f81e6748927b4a87cc216a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRenderers:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 3070312410299183551}
-  _velocity: 3
+  _velocity: 5
   _timeToReachSpeed: 1
 --- !u!153 &3070312410299183544
 ConfigurableJoint:

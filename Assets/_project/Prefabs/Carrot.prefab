@@ -42,10 +42,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6269588662360434533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058eae84d4153d948a3816e9f187e3fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b842d32cb7a25a43a635c4a5e1de145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: {x: 0, y: 0, z: 600}
+  _rotationSpeed: {x: 0, y: 0, z: 360}
 --- !u!1 &6269588663370900542
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df893a30c0a3daa49921433265ab2c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
+  _speed: 10
 --- !u!1 &6269588663451014348
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dcf56df06b27a6647ac4d5ccac19d7b0, type: 3}
       propertyPath: m_Name
-      value: 2dc4a7e92f7fcd9b843ac7e2b1c2800d
+      value: Carrot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcf56df06b27a6647ac4d5ccac19d7b0, type: 3}
