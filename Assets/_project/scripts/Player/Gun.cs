@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 _timer = 0f;
-                GameObject newBullet = Instantiate(_bulletPrefab, _spawnPoint.position, _spawnPoint.rotation);
+                GameObject newBullet = Instantiate(_bulletPrefab, _spawnPoint.position, _bulletPrefab.transform.rotation);
                 newBullet.GetComponent<Rigidbody>().velocity = _spawnPoint.forward * _bulletSpeed;
                 _shotSound.Play();
                 _flash.SetActive(true);
