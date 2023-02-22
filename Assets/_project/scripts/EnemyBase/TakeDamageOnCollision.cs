@@ -8,9 +8,11 @@ public class TakeDamageOnCollision : MonoBehaviour
     {
         if (collision.rigidbody)
         {
-            if (collision.rigidbody.GetComponent<Bullet>())
+            Bullet bullet = collision.rigidbody.GetComponent<Bullet>();
+            if (bullet)
             {
                 _enemyHealth.TakeDamage(1);
+
             }
         }
         if (_dieOnAnyCollision)

@@ -9,9 +9,12 @@ public class TakeDamageOnTrigger : MonoBehaviour
         Rigidbody bulletRigidbody = other.attachedRigidbody;
         if (bulletRigidbody)
         {
-            if (bulletRigidbody.GetComponent<Bullet>())
+            Bullet bullet = bulletRigidbody.GetComponent<Bullet>();
+            if (bullet)
             {
                 _enemyHealth.TakeDamage(1);
+                bullet.Die();
+
             }
         }
         if (_dieOnAnyCollision && !other.isTrigger)
