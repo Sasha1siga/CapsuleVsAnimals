@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyEnable : MonoBehaviour
 {
     [SerializeField] private float _enableDistance; 
-
     [SerializeField]private List<GameObject> _enemiesList;
     private Transform _playerTransform;
     void Start()

@@ -18,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             _eventOnTakeDamage.Invoke();
-            Debug.Log("Damage");
         }
     }
 
