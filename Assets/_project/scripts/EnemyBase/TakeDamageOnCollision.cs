@@ -11,7 +11,7 @@ public class TakeDamageOnCollision : MonoBehaviour
             Bullet bullet = collision.rigidbody.GetComponent<Bullet>();
             if (bullet)
             {
-                _enemyHealth.TakeDamage(1);
+                _enemyHealth.TakeDamage(bullet.DamageValue);
 
             }
         }

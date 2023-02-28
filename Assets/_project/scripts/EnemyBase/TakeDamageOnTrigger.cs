@@ -12,7 +12,7 @@ public class TakeDamageOnTrigger : MonoBehaviour
             Bullet bullet = bulletRigidbody.GetComponent<Bullet>();
             if (bullet)
             {
-                _enemyHealth.TakeDamage(1);
+                _enemyHealth.TakeDamage(bullet.DamageValue);
                 bullet.Die();
 
             }
