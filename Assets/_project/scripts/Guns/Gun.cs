@@ -44,13 +44,12 @@ public class Gun : MonoBehaviour
     }
     public virtual void Activate()
     {
+        _timer = 0f;
         gameObject.SetActive(true);
-        Debug.Log("Activate");
     }
     public virtual void Deactivate()
     {
         gameObject.SetActive(false);
-        Debug.Log("Deactivate");
     }
     public virtual void AddBullets(int numberOfBullet)
     {
