@@ -6,10 +6,10 @@ public class TakeDamageOnTrigger : MonoBehaviour
     [SerializeField] private bool _dieOnAnyCollision;
     private void OnTriggerEnter(Collider other)
     {
-        Rigidbody bulletRigidbody = other.attachedRigidbody;
-        if (bulletRigidbody)
+        Rigidbody rigidbody = other.attachedRigidbody;
+        if (rigidbody)
         {
-            Bullet bullet = bulletRigidbody.GetComponent<Bullet>();
+            Bullet bullet = rigidbody.GetComponent<Bullet>();
             if (bullet)
             {
                 _enemyHealth.TakeDamage(bullet.DamageValue);
