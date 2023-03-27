@@ -38,10 +38,6 @@ public class ShotGun : Gun
     private void UpdateText()
     {
         _bulletsText.text = "Пули:" + _numberOfBullets.ToString();
-        if (!_bulletsText.enabled)
-        {
-            _bulletsText.enabled = true;
-        }
     }
 
     public override void AddBullets(int numberOfBullet)

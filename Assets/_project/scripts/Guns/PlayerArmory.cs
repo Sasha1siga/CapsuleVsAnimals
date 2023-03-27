@@ -11,18 +11,9 @@ public class PlayerArmory : MonoBehaviour
 
     public void TakeGunByIndex(int gunIndex)
     {
+        _guns[_curentGunIndex].Deactivate();
+        _guns[gunIndex].Activate();
         _curentGunIndex = gunIndex;
-        for (int i = 0; i < _guns.Length; i++)
-        {
-            if (i == gunIndex)
-            {
-                _guns[i].Activate();
-            }
-            else
-            {
-                _guns[i].Deactivate();
-            }
-        }
     }
 
     public void AddBullets(int gunIndex, int numverOfBullets)
