@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private float _bulletTimeToDestroy = 7f;
     [SerializeField] private float _shotPeriod = 0.2f;
     [SerializeField] private AudioSource _shotSound;
+    [SerializeField] private AudioSource _addBulletsSound;
     [SerializeField] private GameObject _flash;
     [SerializeField] private int _damageValue;
 
@@ -53,5 +54,6 @@ public class Gun : MonoBehaviour
     }
     public virtual void AddBullets(int numberOfBullet)
     {
+        _addBulletsSound.Play();
     }
 }

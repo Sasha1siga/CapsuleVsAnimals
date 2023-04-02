@@ -43,5 +43,6 @@ public class Automat : Gun
         _numberOfBullets += numberOfBullet;
         UpdateText();
         _playerArmory.TakeGunByIndex(2);
+        base.AddBullets(numberOfBullet);
     }
 }

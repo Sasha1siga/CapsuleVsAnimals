@@ -45,5 +45,6 @@ public class ShotGun : Gun
         _numberOfBullets += numberOfBullet;
         UpdateText();
         _playerArmory.TakeGunByIndex(1);
+        base.AddBullets(numberOfBullet);
     }
 }
