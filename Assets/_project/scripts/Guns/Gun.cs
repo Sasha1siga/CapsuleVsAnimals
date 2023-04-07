@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private AudioSource _addBulletsSound;
     [SerializeField] private GameObject _flash;
     [SerializeField] private int _damageValue;
+    [SerializeField] private ParticleSystem _shotEffect;
 
     private float _timer;
     void Update()
@@ -38,6 +39,7 @@ public class Gun : MonoBehaviour
         _shotSound.Play();
         _flash.SetActive(true);
         Invoke("HideFlash", 0.08f);
+        _shotEffect.Play();
     }    
     private void HideFlash()
     {
