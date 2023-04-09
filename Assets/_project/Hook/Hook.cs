@@ -10,12 +10,14 @@ public class Hook : MonoBehaviour
     
     private Collider _collider;
     private FixedJoint _fixedJoint;
+    private RopeGun _ropeGun;
 
     private void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         Physics.IgnoreCollision(_collider, _playerCollider);
+        _ropeGun = FindObjectOfType<RopeGun>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,6 +28,7 @@ public class Hook : MonoBehaviour
             {
                 _fixedJoint.connectedBody = collision.rigidbody;
             }
+            _ropeGun.CreateSpring();
         }
     }
     public void StopFix()
