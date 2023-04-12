@@ -21998,6 +21998,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9096803720657239618, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
+      propertyPath: _healthValue
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9096803720657239620, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
       propertyPath: m_Name
       value: LootHeal (6)
@@ -24175,11 +24179,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 64600704720155174, guid: 5e6d923e6649cb949a8d315e26246fa3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e6d923e6649cb949a8d315e26246fa3, type: 3}
---- !u!4 &655509133 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-  m_PrefabInstance: {fileID: 898171823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &656133605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29206,63 +29205,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4427546486438228, guid: 5e6d923e6649cb949a8d315e26246fa3, type: 3}
   m_PrefabInstance: {fileID: 1682145748}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &808736039
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 894363917}
-    m_Modifications:
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -18.306
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239620, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_Name
-      value: LootHeal (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
 --- !u!1001 &808926259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31974,8 +31916,6 @@ Transform:
   - {fileID: 1384815403}
   - {fileID: 1747236050}
   - {fileID: 177766651}
-  - {fileID: 2146232326}
-  - {fileID: 655509133}
   - {fileID: 691837617}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -32069,63 +32009,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4427546486438228, guid: 5e6d923e6649cb949a8d315e26246fa3, type: 3}
   m_PrefabInstance: {fileID: 1379258165}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &898171823
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 894363917}
-    m_Modifications:
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -16.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096803720657239620, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-      propertyPath: m_Name
-      value: LootHeal (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
 --- !u!1 &898662867
 GameObject:
   m_ObjectHideFlags: 0
@@ -76423,11 +76306,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4427546486438228, guid: 5e6d923e6649cb949a8d315e26246fa3, type: 3}
   m_PrefabInstance: {fileID: 534426827}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2146232326 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9096803720657239617, guid: 10f525c0a31044e44b9d0a199c9409e5, type: 3}
-  m_PrefabInstance: {fileID: 808736039}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5486626892834831435
 PrefabInstance:
