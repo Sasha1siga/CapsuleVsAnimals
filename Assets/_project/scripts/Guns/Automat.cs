@@ -9,6 +9,7 @@ public class Automat : Gun
     [SerializeField] private int _numberOfBullets;
     [SerializeField] private Text _bulletsText;
     [SerializeField] private PlayerArmory _playerArmory;
+    [SerializeField] private int _ginIndex = 2;
 
     public override void Shot()
     {
@@ -42,7 +43,7 @@ public class Automat : Gun
     {
         _numberOfBullets += numberOfBullet;
         UpdateText();
-        _playerArmory.TakeGunByIndex(2);
+        _playerArmory.TakeGunByIndex(_ginIndex);
         base.AddBullets(numberOfBullet);
     }
 }

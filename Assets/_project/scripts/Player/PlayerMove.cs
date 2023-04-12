@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public bool Grounded { get; private set; }
+
     [SerializeField] private Rigidbody _playerRigidbody;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _jumpSpeed;
     [SerializeField] private float _friction;
-    [SerializeField] private bool _grounded;
     [SerializeField] private float _maxSpeed;
     [SerializeField] private Transform _capsuleTransform;
     [SerializeField] private Transform _pointer;
 
+    private int _jumpFrameCounter;
+
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded)
         {
-            _playerRigidbody.AddForce(0, _jumpSpeed, 0, ForceMode.VelocityChange);
+            Jump();
         }
 
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) || !_grounded)
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) || !Grounded)
         {
             _capsuleTransform.localScale = Vector3.Lerp(_capsuleTransform.localScale, new Vector3(1f, 0.5f, 1f), Time.deltaTime * 15f);
         }
@@ -32,11 +35,17 @@ public class PlayerMove : MonoBehaviour
 
         
     }
+    public void Jump()
+    {
+        _playerRigidbody.AddForce(0, _jumpSpeed, 0, ForceMode.VelocityChange);
+        _jumpFrameCounter = 0;
+        
+    }
 
     void FixedUpdate()
     {
         float speedMultiplier = 1f;
-        if (!_grounded)
+        if (!Grounded)
         {
             speedMultiplier = 0.2f;
             if (_playerRigidbody.velocity.x > _maxSpeed && Input.GetAxis("Horizontal") > 0)
@@ -50,14 +59,19 @@ public class PlayerMove : MonoBehaviour
         }
         
         _playerRigidbody.AddForce(Input.GetAxis("Horizontal") * _moveSpeed * speedMultiplier, 0, 0, ForceMode.VelocityChange);
-        if (_grounded)
+        if (Grounded)
         {
             _playerRigidbody.AddForce(-_playerRigidbody.velocity.x * _friction, 0, 0, ForceMode.VelocityChange);
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 15f);
         }
 
-        
-
-       
+        _jumpFrameCounter += 1;
+        if (_jumpFrameCounter == 2)
+        {
+            _playerRigidbody.freezeRotation = false;
+            _playerRigidbody.AddRelativeTorque(0, 0, 10f, ForceMode.VelocityChange);
+        }
     }
 
    
@@ -68,7 +82,8 @@ public class PlayerMove : MonoBehaviour
             float angle = Vector3.Angle(collision.contacts[i].normal, Vector3.up);
             if (angle < 45)
             {
-                _grounded = true;
+                Grounded = true;
+                _playerRigidbody.freezeRotation = true;
             }
         }
         
@@ -76,6 +91,6 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        _grounded = false;
+        Grounded = false;
     }
 }

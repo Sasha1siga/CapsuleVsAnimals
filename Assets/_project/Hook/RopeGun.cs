@@ -22,6 +22,11 @@ public class RopeGun : MonoBehaviour
     [SerializeField] private RopeState _currentRopeState;
     [SerializeField] private RopeRenderer _ropeRenderer;
     private float _length;
+    private PlayerMove _playerMove;
+    private void Start()
+    {
+        _playerMove = FindObjectOfType<PlayerMove>();
+    }
 
     void Update()
     {
@@ -41,6 +46,13 @@ public class RopeGun : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
+            if (_currentRopeState == RopeState.Active)
+            {
+                if (!_playerMove.Grounded)
+                {
+                    _playerMove.Jump();
+                }
+            }
             DestroySpring();
         }
         if (_currentRopeState == RopeState.Active || _currentRopeState == RopeState.Fly)

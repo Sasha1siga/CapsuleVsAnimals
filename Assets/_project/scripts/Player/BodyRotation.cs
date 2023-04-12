@@ -6,7 +6,7 @@ public class BodyRotation : MonoBehaviour
 {
     [SerializeField] private Transform _pointer;
     [SerializeField] private float _angleRotation = 45;
-    [SerializeField] private float _angleRotationSpeed = 5; 
+    [SerializeField] private float _angleRotationSpeed = 5f; 
 
 
     void Update()
@@ -14,11 +14,11 @@ public class BodyRotation : MonoBehaviour
 
         if (_pointer.rotation.y > 0)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, -_angleRotation, 0), Time.deltaTime * _angleRotationSpeed);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(transform.localRotation.x, -_angleRotation, transform.localRotation.z), Time.deltaTime * _angleRotationSpeed);
         }
         else
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, _angleRotation, 0), Time.deltaTime * _angleRotationSpeed);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(transform.localRotation.x, _angleRotation, transform.localRotation.z), Time.deltaTime * _angleRotationSpeed);
         }
 
 
