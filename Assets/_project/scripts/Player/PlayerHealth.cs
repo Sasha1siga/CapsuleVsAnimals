@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -56,6 +57,6 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Die()
     {
-        Debug.Log("You lose!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

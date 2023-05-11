@@ -12,7 +12,7 @@ public class Hook : MonoBehaviour
     private FixedJoint _fixedJoint;
     private RopeGun _ropeGun;
 
-    private void Start()
+    private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
